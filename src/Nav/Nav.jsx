@@ -4,7 +4,7 @@ import hamburger from '../assets/icons/hamburger.svg';
 
 const Nav = () => {
   return (
-    <header className="padding-x py-8 absolute z-10 w-full">
+    <header className="pl-5 pr-5 py-8 absolute z-10 w-full">
         <nav className='flex justify-between items-center max-container'>
             <a href="/" className='flex items-center'>
                 <img 
