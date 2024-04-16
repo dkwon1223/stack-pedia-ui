@@ -8,7 +8,7 @@ const Hero = () => {
     <section id="home" className='w-screen flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container'>
       <div className='relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 ml-10'>
         <h1 className='mt-10 font-palanquin text-4xl max-sm:text-[36px] max-sm:leading-[41px] font-bold'>
-            <span className='xl:bg-white xl:whitespace-nowrap relative z-10 pr-10'>Explore new technologies</span>
+            <span className='xl:bg-white xl:whitespace-nowrap relative pr-10'>Explore new technologies</span>
             <br/>
             Discover your <span className='text-coral-red inline-block mt-3'>stack</span>
         </h1>
