@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../Button/Button';
 import ArrowIcon from '../assets/icons/arrow-right.svg';
 import StackGraphic from '../assets/images/stack-diagram.png';
+import { Link } from 'react-router-dom';
 
 const Information = () => {
   return (
@@ -26,8 +27,12 @@ const Information = () => {
         <p className='font-monserrat text-slate-gray text-lg leading-8 mt-2 mb-5 sm:max-w-sm lg:max-w-lg'>Most applications are built to be used by a large number of people. By planning and being intentional about your choices in each piece of your stack, you can avoid horizontal and vertical scaling issues as your project grows.</p>
         <p className='font-monserrat text-orange-600 text-xl leading-8 mt-2 sm:max-w-sm lg:max-w-lg'>Which one is the best?</p>
         <p className='font-monserrat text-slate-gray text-lg leading-8 mt-2 mb-5 sm:max-w-sm lg:max-w-lg'>There is no one "right" tech stack. Different stacks offer their own unique benefits. When researching the right one for you, it's a good idea to consider the project purpose/requirements, scope, scalability, and ecosystems surrounding each technology.</p>
-        <Button label="View Individual Technologies" iconUrl={ArrowIcon}/>
-        <Button label="View Tech Stacks" iconUrl={ArrowIcon}/>
+        <Link to="/technologies">
+          <Button label="View Individual Technologies" iconUrl={ArrowIcon}/>
+        </Link>
+        <Link to="/stacks">
+          <Button label="View Tech Stacks" iconUrl={ArrowIcon}/>
+        </Link>
       </div>
     </section>
   )
