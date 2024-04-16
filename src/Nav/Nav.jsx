@@ -17,10 +17,10 @@ const Nav = () => {
             </a>
             <ul className='flex-1 flex justify-end items-center gap-12 max-lg:hidden mr-10'>
                 <li className='font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline'>
-                    <a>Technologies</a>
+                    <a className='hover:text-coral-red'>Technologies</a>
                 </li>
                 <li className='font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline '>
-                    <a>Stacks</a>
+                    <a className='hover:text-coral-red'>Stacks</a>
                 </li>
             </ul>
             <div className='hidden max-lg:block'>
