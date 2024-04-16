@@ -6,8 +6,8 @@ import DevGraphic from '../assets/images/dev-graphic.png'
 const Hero = () => {
   return (
     <section id="home" className='w-screen flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container'>
-      <div className='relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 ml-5'>
-        <h1 className='mt-10 font-palanquin text-4xl max-sm:text-[72px] max-sm:leading-[82px] font-bold'>
+      <div className='relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 ml-10'>
+        <h1 className='mt-10 font-palanquin text-4xl max-sm:text-[36px] max-sm:leading-[41px] font-bold'>
             <span className='xl:bg-white xl:whitespace-nowrap relative z-10 pr-10'>Explore new technologies</span>
             <br/>
             Discover your <span className='text-coral-red inline-block mt-3'>stack</span>
@@ -26,7 +26,7 @@ const Hero = () => {
         </article>
       </div>
 
-      <figure className='relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-primary bg-hero bg-cover bg-center'>
+      <figure className='relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-primary bg-hero bg-cover bg-center bg-gradient-to-b-0.2'>
         <img 
         src={DevGraphic}
         alt="developer coding at the computer"
