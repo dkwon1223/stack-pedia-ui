@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.active {
+  @apply text-orange-500 font-bold;
+}
+
 * {
   margin: 0;
   padding: 0;
