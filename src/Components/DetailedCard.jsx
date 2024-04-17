@@ -24,9 +24,9 @@ const DetailedCard = ({technology}) => {
           <span className="text-coral-red inline-block mt-3 text-3xl">{technology.type}</span>
         </h1>
         <h2 className="font-palanquin text-lg max-sm:text-[36px] max-sm:leading-[41px] font-bold">
-            Created by | {technology.creator}
+            Created by - {technology.creator} 
             <br />
-            Created | {technology.date_created.slice(0,4)}
+            Created in - {technology.date_created.slice(0,4)} 
         </h2>
         <p className="font-monserrat text-slate-gray text-lg leading-8 mt-6 mb-6 sm:max-w-sm lg:max-w-lg">
           {technology.summary}
