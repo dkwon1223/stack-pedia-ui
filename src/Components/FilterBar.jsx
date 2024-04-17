@@ -20,7 +20,7 @@ const TechFilterBar = ({ technologies, fetchFilteredTechnologies, setIsFiltered}
     <>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="w-1/5 flex justify-evenly items-center mt-24 bg-orange-400 h-12 rounded-lg border-4 border-transparent active:border-white duration-600 active:text-white font-bold tracking-wider font-palanquin"
+        className="lg:w-1/5 sm:w-4/5 flex justify-evenly items-center mt-24 bg-orange-400 h-12 rounded-lg border-4 border-transparent active:border-white duration-600 active:text-white font-bold tracking-wider font-palanquin"
       >
         Filter by Category
         {!isOpen ? (
@@ -30,7 +30,7 @@ const TechFilterBar = ({ technologies, fetchFilteredTechnologies, setIsFiltered}
         )}
       </button>
       {isOpen && (
-        <div className="bg-orange-400 flex flex-col justify-center items-center w-1/5 mt-2 rounded-lg">
+        <div className="bg-orange-400 flex flex-col justify-center items-center lg:w-1/5 sm:w-4/5 xsm:w-3/5 mt-2 rounded-lg">
           <>
             {overallTypes.map((type, index) => {
               return (

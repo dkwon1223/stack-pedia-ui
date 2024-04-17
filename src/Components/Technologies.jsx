@@ -55,7 +55,7 @@ const Technologies = () => {
           isFiltered={isFiltered}
           setIsFiltered={setIsFiltered}
         />
-        <section className="grid grid-cols-6 grid-rows-[auto] auto-rows-fr pt-12 w-full gap-x-5 gap-y-5 px-8">
+        <section className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
           {isFiltered ? (filteredTechnologies.map((tech) => {
             return (
               <Link key={tech.name.toLowerCase()} to={`/technologies/${tech.name.toLowerCase()}`} state={{ specs: `${tech.overall_type}/${tech.name.toLowerCase()}` }} className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl">
