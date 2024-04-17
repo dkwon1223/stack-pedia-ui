@@ -26,12 +26,12 @@ const Nav = () => {
           }`}
         >
           <li className="font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline">
-            <NavLink to="/technologies/all">
+            <NavLink to="/technologies">
               <p className="hover:text-coral-red">Technologies</p>
             </NavLink>
           </li>
           <li className="font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline ">
-            <NavLink to="/stacks/all">
+            <NavLink to="/stacks">
               <p className="hover:text-coral-red">Stacks</p>
             </NavLink>
           </li>

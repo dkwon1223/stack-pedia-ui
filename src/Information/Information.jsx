@@ -55,10 +55,10 @@ const Information = () => {
           idea to consider the project purpose/requirements, scope, scalability,
           and ecosystems surrounding each technology.
         </p>
-        <Link to="/technologies/all">
+        <Link to="/technologies">
           <Button label="View Individual Technologies" iconUrl={ArrowIcon} />
         </Link>
-        <Link to="/stacks/all">
+        <Link to="/stacks">
           <Button label="View Tech Stacks" iconUrl={ArrowIcon} />
         </Link>
       </div>

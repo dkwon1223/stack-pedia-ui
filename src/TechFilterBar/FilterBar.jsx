@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ArrowDown from "../assets/icons/arrow-down.svg";
 
-const TechFilterBar = ({ technologies, setTechnologies, fetchTechnologies }) => {
+const TechFilterBar = ({ technologies, fetchTechnologies }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const overallTypes = technologies.reduce((acc, tech) => {
@@ -11,15 +11,15 @@ const TechFilterBar = ({ technologies, setTechnologies, fetchTechnologies }) => 
     return acc;
   }, []);
 
-  async function filterTechnologies() {
-    
+  async function filterTechnologies(category) {
+    await fetchTechnologies(category)
   }
 
   return (
     <>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="w-1/5 flex justify-evenly items-center mt-24 bg-coral-red h-12 rounded-lg border-4 border-transparent active:border-white duration-600 active:text-white font-bold tracking-wider"
+        className="w-1/5 flex justify-evenly items-center mt-24 bg-coral-red h-12 rounded-lg border-4 border-transparent active:border-white duration-600 active:text-white font-bold tracking-wider font-palanquin"
       >
         Filter by Category
         {!isOpen ? (
@@ -30,9 +30,9 @@ const TechFilterBar = ({ technologies, setTechnologies, fetchTechnologies }) => 
       </button>
       {isOpen && (
         <div className="bg-coral-red flex flex-col justify-center items-center w-1/5 mt-2 rounded-lg">
-          {overallTypes.map((type) => {
+          {overallTypes.map((type, index) => {
             return (
-              <button onClick={() => filterTechnologies()} className="bg-white w-1/2 rounded-sm my-2 font-semibold">
+              <button key={index} onClick={() => filterTechnologies(type)} className="bg-white w-1/2 rounded-sm my-2 font-semibold font-palanquin">
                 {type}
               </button>
             );
