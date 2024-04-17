@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import DetailedCard from './DetailedCard';
 import Nav from './Nav';
+import Loading from './Loading'
 
 const TechnologyDetails = () => {
   const location = useLocation();
@@ -24,15 +25,16 @@ const TechnologyDetails = () => {
   };
 
   useEffect(() => {
-    fetchSpecifcTechnology(specs);
+    setTimeout(() => {
+      fetchSpecifcTechnology(specs);
+    }, 1500) 
   }, [])
   
   return (
     <section className='flex flex-col h-screen'>
       <Nav />
       <section className='h-full w-full pt-28 flex justify-center items-center'>
-        {technology ? <DetailedCard technology={technology}/> : <h1>
-          Loading...</h1>}
+        {technology ? <DetailedCard technology={technology}/> : <Loading />}
       </section>
     </section>
   )
