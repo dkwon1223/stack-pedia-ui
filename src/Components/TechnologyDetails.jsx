@@ -1,13 +1,16 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import Nav from './Nav';
 
 const TechnologyDetails = () => {
-  const { id } = useParams();
-  console.log(id);
+  const { name } = useParams();
   return (
-    <div className='h-full w-full'>
-      <h1>{id}</h1>
-    </div>
+    <>
+      <Nav />
+      <section className='h-9/10 w-full border-red-500'>
+        <h1>{name}</h1>
+      </section>
+    </>
   )
 }
 
