@@ -58,7 +58,7 @@ const Technologies = () => {
         <section className="grid grid-cols-6 grid-rows-[auto] auto-rows-fr pt-12 w-full gap-x-5 gap-y-5 px-8">
           {isFiltered ? (filteredTechnologies.map((tech) => {
             return (
-              <Link key={tech.name.toLowerCase()} to={`/technologies/${tech.name.toLowerCase()}`} state={{ specs: `${tech.overall_type}/${tech.name.toLowerCase()}` }} className="flex flex-col justify-evenly items-center max-h-44 border rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl">
+              <Link key={tech.name.toLowerCase()} to={`/technologies/${tech.name.toLowerCase()}`} state={{ specs: `${tech.overall_type}/${tech.name.toLowerCase()}` }} className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl">
                 <img src={tech.image_url} className="h-1/2" />
                 <h1 className="font-bold text-center">{tech.name}</h1>
               </Link>
@@ -67,7 +67,7 @@ const Technologies = () => {
           : 
           (technologies.map((tech) => {
             return (
-              <Link key={tech.name.toLowerCase()} to={`/technologies/${tech.name.toLowerCase()}`} state={{specs: `${tech.overall_type}/${tech.name.toLowerCase()}`}} className="flex flex-col justify-evenly items-center max-h-44 border rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl">
+              <Link key={tech.name.toLowerCase()} to={`/technologies/${tech.name.toLowerCase()}`} state={{specs: `${tech.overall_type}/${tech.name.toLowerCase()}`}} className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl">
                 <img src={tech.image_url} className="h-1/2" />
                 <h1 className="font-bold text-center">{tech.name}</h1>
               </Link>

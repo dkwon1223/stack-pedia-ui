@@ -11,8 +11,8 @@ const DetailedCard = ({technology}) => {
       <figure className="flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-primary bg-hero bg-cover bg-center bg-gradient-to-b-0.2">
         <img
           src={technology.image2_url}
-          alt="image of technology"
-          width={610}
+          alt={`cover image showing {${technology.name}}`}
+          width={670}
           height={500}
           className="object-contain relative z-10"
         />
