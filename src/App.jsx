@@ -14,9 +14,7 @@ const App = () => {
       <section className="xl:padding-1 wide:padding-r padding-b">
         <Information />
       </section>
-      <section className="bg-black padding-x py-8">
-        <Footer />
-      </section>
+      <Footer />
     </main>
   )
 };

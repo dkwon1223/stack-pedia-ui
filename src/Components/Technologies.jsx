@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./Nav";
 import { useState, useEffect } from "react";
 import TechFilterBar from "./FilterBar";
+import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 const Technologies = () => {
@@ -75,6 +76,7 @@ const Technologies = () => {
           }))}
         </section>
       </section>
+      <Footer />
     </>
   );
 };
