@@ -1,7 +1,8 @@
 import React from "react";
-import Nav from "../Nav/Nav";
+import Nav from "./Nav";
 import { useState, useEffect } from "react";
-import TechFilterBar from "../TechFilterBar/FilterBar";
+import TechFilterBar from "./FilterBar";
+import { Link } from "react-router-dom";
 
 const Technologies = () => {
   const [technologies, setTechnologies] = useState([]);

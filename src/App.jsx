@@ -1,7 +1,7 @@
-import Nav from "./Nav/Nav";
-import Hero from "./Hero/Hero";
-import Information from "./Information/Information";
-import Footer from "./Footer/Footer";
+import Nav from "./Components/Nav";
+import Hero from "./Components/Hero";
+import Information from "./Components/Information";
+import Footer from "./Components/Footer";
 
 const App = () => {
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button/Button";
+import Button from "./Button";
 import ArrowIcon from "../assets/icons/arrow-right.svg";
 import StackGraphic from "../assets/images/stack-diagram.png";
 import { Link } from "react-router-dom";

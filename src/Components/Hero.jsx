@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button/Button";
+import Button from "./Button";
 import ArrowIcon from "../assets/icons/arrow-right.svg";
 import DevGraphic from "../assets/images/dev-graphic.png";
 
