@@ -46,7 +46,7 @@ const Technologies = () => {
   return (
     <>
       <Nav />
-      <section className="flex flex-col justify-center items-center">
+      <section className="flex flex-col justify-center items-center mb-12">
         <TechFilterBar
           technologies={technologies}
           setTechnologies={setTechnologies}

@@ -10,7 +10,7 @@ const Hero = () => {
       className="w-screen flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 ml-10">
-        <h1 className="mt-10 font-palanquin text-4xl max-sm:text-[36px] max-sm:leading-[41px] font-bold">
+        <h1 className="font-palanquin text-4xl max-sm:text-[36px] max-sm:leading-[41px] font-bold">
           <span className="xl:bg-white xl:whitespace-nowrap relative pr-10">
             Explore new technologies
           </span>
@@ -18,14 +18,16 @@ const Hero = () => {
           Discover your{" "}
           <span className="text-coral-red inline-block mt-3">stack</span>
         </h1>
-        <p className="font-monserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
+        <p className="font-monserrat text-slate-gray text-lg leading-8 mt-6 mb-12 sm:max-w-sm">
           Your destination to evolve as a developer. Innovate and grow your
           tools.
         </p>
-        <Button label="Learn More" iconUrl={ArrowIcon} />
-        <article className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
+        <a href="#info">
+          <Button label="Learn More" iconUrl={ArrowIcon} />
+        </a>
+        <article className="flex justify-start items-start flex-wrap w-full mt-2 gap-16">
           <div>
-            <p className="text-4xl font-palanquin font-bold">30+</p>
+            <p className="text-4xl font-palanquin font-bold">40+</p>
             <p className="leading-7 font-montserrat text-slate-gray">
               Technologies
             </p>
