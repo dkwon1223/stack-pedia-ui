@@ -7,7 +7,7 @@ hatch.register()
 
 const Loading = () => {
   return (
-    <section className="h-full w-full flex justify-center items-center bg-loading bg-no-repeat bg-cover">
+    <section className="h-screen w-full flex justify-center items-center bg-loading bg-no-repeat bg-cover">
         <l-hatch
         size="150"
         stroke="20"
