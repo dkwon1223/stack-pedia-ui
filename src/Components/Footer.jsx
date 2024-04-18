@@ -6,7 +6,7 @@ import StackIcon from "../assets/icons/stack-icon.svg";
 
 const Footer = () => {
   return (
-    <footer className="max-container">
+    <footer className="max-container bg-black padding-x py-8">
       <div className="flex justify-center items-start gap-20 flex-wrap max-lg:flex-col">
         <a href="/" className="flex items-center">
           <img src={StackIcon} alt="Logo" width={40} height={10} />

@@ -7,19 +7,19 @@ hatch.register()
 
 const Loading = () => {
   return (
-    <section className='h-full w-full flex justify-start items-center flex-col'>
+    <section className="h-full w-full flex justify-center items-center bg-loading bg-no-repeat bg-cover">
         <l-hatch
         size="150"
         stroke="20"
         speed="5.0" 
-        color="orange" 
+        color="#F87417" 
         ></l-hatch>
-        <h1 className='text-8xl font-bold text-coral-red mb-4'>Loading...</h1>
+        <h1 className='text-8xl font-bold text-[#F87417] mt-12'>Loading...</h1>
         <l-hatch
         size="150"
         stroke="20"
         speed="5.0" 
-        color="orange" 
+        color="#F87417" 
         ></l-hatch>
     </section>
   )

@@ -27,7 +27,7 @@ const TechnologyDetails = () => {
   useEffect(() => {
     setTimeout(() => {
       fetchSpecifcTechnology(specs);
-    }, 1500) 
+    }, 2000) 
   }, [])
   
   return (
