@@ -3,7 +3,7 @@ import Button from './Button';
 import DocIcon from '../assets/icons/doc-icon.svg';
 import Footer from './Footer';
 
-const DetailedCard = ({technology}) => {
+const DetailedTechCard = ({technology}) => {
   return (
     <section>
       <section
@@ -61,4 +61,4 @@ const DetailedCard = ({technology}) => {
   )
 }
 
-export default DetailedCard
+export default DetailedTechCard

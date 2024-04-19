@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import DetailedTechCard from './DetailedTechCard';
+import DetailedStackCard from './DetailedStackCard';
 import Nav from './Nav';
 import Loading from './Loading'
 
-const TechnologyDetails = () => {
+const StackDetails = () => {
   const location = useLocation();
   const { specs } = location.state;
-  const [technology, setTechnology] = useState();
+  const [stack, setStack] = useState();
 
-  const fetchSpecifcTechnology = async (endpoint) => {
+  const fetchSpecifcStack= async (endpoint) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/technologies/${endpoint}`
+        `http://localhost:8080/api/v1/stacks/${endpoint}`
       );
       if (!response.ok) {
         throw new Error("Failed to retrieve data. Try again later.");
       }
       const data = await response.json();
-      setTechnology(data)
+      setStack(data)
     } catch (error) {
       console.log(Error, error);
     }
@@ -26,7 +26,7 @@ const TechnologyDetails = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetchSpecifcTechnology(specs);
+      fetchSpecifcStack(specs);
     }, 2000) 
   }, [])
   
@@ -34,11 +34,11 @@ const TechnologyDetails = () => {
     <section className='flex flex-col h-screen'>
       <Nav />
       <section className='h-full w-full pt-28 flex justify-center items-center'>
-        {technology ? <DetailedTechCard technology={technology}/> : <Loading />}
+        {stack ? <DetailedStackCard stack={stack}/> : <Loading />}
       </section>
     </section>
   )
   
 }
 
-export default TechnologyDetails
+export default StackDetails

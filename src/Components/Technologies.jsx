@@ -1,14 +1,16 @@
 import React from "react";
-import Nav from "./Nav";
 import { useState, useEffect } from "react";
-import TechFilterBar from "./FilterBar";
-import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import Nav from "./Nav";
+import TechFilterBar from "./TechFilterBar";
+import Footer from "./Footer";
+import Loading from "./Loading";
 
 const Technologies = () => {
   const [technologies, setTechnologies] = useState([]);
   const [filteredTechnologies, setFilteredTechnologies] = useState([]);
   const [isFiltered, setIsFiltered] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const fetchTechnologies = async (endpoint) => {
     try {
@@ -20,6 +22,7 @@ const Technologies = () => {
       }
       const data = await response.json();
       setTechnologies(data);
+      setLoading(false);
     } catch (error) {
       console.log(Error, error);
     }
@@ -35,19 +38,23 @@ const Technologies = () => {
       }
       const data = await response.json();
       setFilteredTechnologies(data);
+      setLoading(false);
     } catch (error) {
       console.log(Error, error);
     }
   };
 
   useEffect(() => {
-    fetchTechnologies("all");
+    setTimeout(() => {
+      fetchTechnologies("all");
+    }, 1500)
   }, []);
 
   return (
     <>
       <Nav />
-      <section className="flex flex-col justify-center items-center mb-12">
+      {loading && <Loading />}
+      {technologies && (<section className="flex flex-col justify-center items-center mb-12">
         <TechFilterBar
           technologies={technologies}
           setTechnologies={setTechnologies}
@@ -75,7 +82,7 @@ const Technologies = () => {
             );
           }))}
         </section>
-      </section>
+      </section>)}
       <Footer />
     </>
   );
