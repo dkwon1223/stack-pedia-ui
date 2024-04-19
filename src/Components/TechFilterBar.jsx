@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import ArrowDown from "../assets/icons/arrow-down.svg";
 
-const TechFilterBar = ({ technologies, fetchFilteredTechnologies, setIsFiltered}) => {
+const TechFilterBar = ({
+  technologies,
+  fetchFilteredTechnologies,
+  setIsFiltered,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const overallTypes = technologies.reduce((acc, tech) => {
@@ -24,7 +28,7 @@ const TechFilterBar = ({ technologies, fetchFilteredTechnologies, setIsFiltered}
       >
         Filter by Category
         {!isOpen ? (
-          <img src={ArrowDown} className="h-16"/>
+          <img src={ArrowDown} className="h-16" />
         ) : (
           <img src={ArrowDown} className="h-16 rotate-180" />
         )}
@@ -34,12 +38,21 @@ const TechFilterBar = ({ technologies, fetchFilteredTechnologies, setIsFiltered}
           <>
             {overallTypes.map((type, index) => {
               return (
-                <button key={index} onClick={() => filterTechnologies(type)} className="bg-orange-700 w-1/2 rounded-full my-2 font-palanquin text-white">
+                <button
+                  key={index}
+                  onClick={() => filterTechnologies(type)}
+                  className="bg-orange-700 w-1/2 rounded-full my-2 font-palanquin text-white"
+                >
                   {type}
                 </button>
               );
             })}
-            <button onClick={() => setIsFiltered(false)} className="bg-orange-700 w-1/2 rounded-full my-2 font-semibold font-palanquin text-white">all</button>
+            <button
+              onClick={() => setIsFiltered(false)}
+              className="bg-orange-700 w-1/2 rounded-full my-2 font-semibold font-palanquin text-white"
+            >
+              all
+            </button>
           </>
         </div>
       )}
