@@ -56,14 +56,14 @@ const Technologies = () => {
       {loading && <Loading />}
       {technologies && (
         <section className="flex flex-col justify-center items-center mb-12">
-          <TechFilterBar
+          { !loading && (<TechFilterBar
             technologies={technologies}
             setTechnologies={setTechnologies}
             fetchTechnologies={fetchTechnologies}
             fetchFilteredTechnologies={fetchFilteredTechnologies}
             isFiltered={isFiltered}
             setIsFiltered={setIsFiltered}
-          />
+          />)}
           <section className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
             {isFiltered
               ? filteredTechnologies.map((tech) => {

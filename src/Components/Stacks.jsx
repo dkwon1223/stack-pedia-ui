@@ -55,11 +55,11 @@ const Stacks = () => {
       {loading2 && <Loading />}
       {stacks && (
         <section className="flex flex-col justify-center items-center mb-12 h-full w-full">
-          <StackFilterBar
+          {!loading2 && (<StackFilterBar
             stacks={stacks}
             fetchFilteredStacks={fetchFilteredStacks}
             setIsFiltered2={setIsFiltered2}
-          />
+          />)}
           <section className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-2 mt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
             {isFiltered2
               ? filteredStacks.map((stack) => {
