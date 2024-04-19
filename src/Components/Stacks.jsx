@@ -58,7 +58,7 @@ const Stacks = () => {
         <section className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-2 mt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
           {isFiltered2 ? (filteredStacks.map((stack) => {
             return (
-              <Link key={stack.name.toLowerCase()} to={`/technologies/${stack.name.toLowerCase()}`} state={{ specs: `${stack.overall_type}/${stack.name.toLowerCase()}` }} className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl">
+              <Link key={stack.name.toLowerCase()} to={`/stacks/${stack.name.toLowerCase()}`} state={{ specs: `${stack.type}/${stack.name.toLowerCase()}` }} className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl">
                 <img src={stack.image_url} className="h-1/2" />
                 <h1 className="font-bold text-center">{stack.name}</h1>
               </Link>
@@ -67,7 +67,7 @@ const Stacks = () => {
           : 
           (stacks.map((stack) => {
             return (
-              <Link key={stack.name.toLowerCase()} to={`/technologies/${stack.name.toLowerCase()}`} state={{specs: `${stack.overall_type}/${stack.name.toLowerCase()}`}} className="flex flex-col justify-evenly items-center max-h-54 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl">
+              <Link key={stack.name.toLowerCase()} to={`/stacks/${stack.name.toLowerCase()}`} state={{specs: `${stack.type}/${stack.name.toLowerCase()}`}} className="flex flex-col justify-evenly items-center max-h-54 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl">
                 <img src={stack.image_url} className="h-auto" />
                 <h1 className="font-bold text-center">{stack.name}</h1>
               </Link>
