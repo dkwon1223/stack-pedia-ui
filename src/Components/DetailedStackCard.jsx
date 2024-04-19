@@ -28,37 +28,39 @@ const DetailedStackCard = ({stack}) => {
           <p className="font-monserrat text-slate-gray text-lg leading-8 mt-4 mb-4 sm:max-w-sm lg:max-w-lg">
             {stack.summary}
           </p>
-          <article className="flex flex-col justify-start items-start flex-wrap w-full gap-6 mb-6">
-            <div className='flex'>
-                <div>
-                <p className="text-xl font-palanquin font-bold">Potential Downsides</p>
-                <ul className="leading-7 font-montserrat text-slate-gray">
-                    {stack.downsides.map((downside, index) => {
-                    return <li key={index}>{downside}</li>
-                    })}
-                </ul>
+          <article className="flex flex-col justify-start items-start flex-wrap w-full gap-4 mb-6">
+            <div className='flex justify-evenly'>
+                <div className='w-1/2'>
+                  <p className="text-lg font-palanquin font-bold">Potential Downsides</p>
+                  <ul className="leading-7 font-montserrat text-slate-gray w-3/4">
+                      {stack.downsides.map((downside, index) => {
+                      return <li key={index} className='list-disc'>{downside}</li>
+                      })}
+                  </ul>
                 </div>
-                <div>
-                <p className="text-xl font-palanquin font-bold">Potential Benefits</p>
-                <ul className="leading-7 font-montserrat text-slate-gray">
-                    {stack.benefits.map((benefit, index) => {
-                    return <li key={index}>{benefit}</li>
-                    })}
-                </ul>
+                <div className='w-1/2'>
+                  <p className="text-lg font-palanquin font-bold">Potential Benefits</p>
+                  <ul className="leading-7 font-montserrat text-slate-gray w-3/4">
+                      {stack.benefits.map((benefit, index) => {
+                      return <li key={index} className='list-disc'>{benefit}</li>
+                      })}
+                  </ul>
                 </div>
             </div>
-            <div>
-              <p className="text-2xl font-palanquin font-bold">Used At</p>
-              <ul className="leading-7 font-montserrat text-slate-gray text-xl">
-                {stack.companies.map((company, index) => {
-                  return <li key={index}>{company}</li>
-                })}
-              </ul>
+            <div className='flex justify-start items-center w-full'>
+              <div className='mr-40'>
+                <p className="text-lg font-palanquin font-bold">Used At</p>
+                <ul className="leading-7 font-montserrat text-slate-gray">
+                  {stack.companies.map((company, index) => {
+                    return <li key={index} className='list-disc'>{company}</li>
+                  })}
+                </ul>
+              </div>
+              <a href={stack.learn_link} target="_blank">
+                  <Button label="Learn More" iconUrl={DocIcon} />
+              </a>
             </div>
           </article>
-          <a href={stack.learn_link} target="_blank">
-              <Button label="Learn More" iconUrl={DocIcon} />
-          </a>
         </article>
       </section>
       <Footer />
