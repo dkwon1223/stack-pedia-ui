@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import DetailedTechCard from './DetailedTechCard';
-import Nav from './Nav';
-import Loading from './Loading'
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import DetailedTechCard from "./DetailedTechCard";
+import Nav from "./Nav";
+import Loading from "./Loading";
 
 const TechnologyDetails = () => {
   const location = useLocation();
@@ -18,7 +18,7 @@ const TechnologyDetails = () => {
         throw new Error("Failed to retrieve data. Try again later.");
       }
       const data = await response.json();
-      setTechnology(data)
+      setTechnology(data);
     } catch (error) {
       console.log(Error, error);
     }
@@ -27,18 +27,21 @@ const TechnologyDetails = () => {
   useEffect(() => {
     setTimeout(() => {
       fetchSpecifcTechnology(specs);
-    }, 2000) 
-  }, [])
-  
+    }, 2000);
+  }, []);
+
   return (
-    <section className='flex flex-col h-screen'>
+    <section className="flex flex-col h-screen">
       <Nav />
-      <section className='h-full w-full pt-28 flex justify-center items-center'>
-        {technology ? <DetailedTechCard technology={technology}/> : <Loading />}
+      <section className="h-full w-full pt-28 flex justify-center items-center">
+        {technology ? (
+          <DetailedTechCard technology={technology} />
+        ) : (
+          <Loading />
+        )}
       </section>
     </section>
-  )
-  
-}
+  );
+};
 
-export default TechnologyDetails
+export default TechnologyDetails;

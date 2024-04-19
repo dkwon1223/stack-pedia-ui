@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import DetailedStackCard from './DetailedStackCard';
-import Nav from './Nav';
-import Loading from './Loading'
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import DetailedStackCard from "./DetailedStackCard";
+import Nav from "./Nav";
+import Loading from "./Loading";
 
 const StackDetails = () => {
   const location = useLocation();
   const { specs } = location.state;
   const [stack, setStack] = useState();
 
-  const fetchSpecifcStack= async (endpoint) => {
+  const fetchSpecifcStack = async (endpoint) => {
     try {
       const response = await fetch(
         `https://stack-pedia-api.adaptable.app/api/v1/stacks/${endpoint}`
@@ -18,7 +18,7 @@ const StackDetails = () => {
         throw new Error("Failed to retrieve data. Try again later.");
       }
       const data = await response.json();
-      setStack(data)
+      setStack(data);
     } catch (error) {
       console.log(Error, error);
     }
@@ -27,18 +27,17 @@ const StackDetails = () => {
   useEffect(() => {
     setTimeout(() => {
       fetchSpecifcStack(specs);
-    }, 2000) 
-  }, [])
-  
+    }, 2000);
+  }, []);
+
   return (
-    <section className='flex flex-col h-screen'>
+    <section className="flex flex-col h-screen">
       <Nav />
-      <section className='h-full w-full pt-28 flex justify-center items-center'>
-        {stack ? <DetailedStackCard stack={stack}/> : <Loading />}
+      <section className="h-full w-full pt-28 flex justify-center items-center">
+        {stack ? <DetailedStackCard stack={stack} /> : <Loading />}
       </section>
     </section>
-  )
-  
-}
+  );
+};
 
-export default StackDetails
+export default StackDetails;

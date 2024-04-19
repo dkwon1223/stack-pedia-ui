@@ -1,9 +1,9 @@
-import React from 'react';
-import Button from './Button';
-import DocIcon from '../assets/icons/doc-icon.svg';
-import Footer from './Footer';
+import React from "react";
+import Button from "./Button";
+import DocIcon from "../assets/icons/doc-icon.svg";
+import Footer from "./Footer";
 
-const DetailedStackCard = ({stack}) => {
+const DetailedStackCard = ({ stack }) => {
   return (
     <section>
       <section
@@ -21,43 +21,61 @@ const DetailedStackCard = ({stack}) => {
         </figure>
         <article className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x ml-10 xsm:ml-2">
           <h1 className="font-palanquin text-4xl max-sm:text-[36px] max-sm:leading-[41px] font-bold">
-            {stack.name} 
+            {stack.name}
             <br />
-            <span className="text-coral-red inline-block mt-3 text-3xl">{stack.type}</span>
+            <span className="text-coral-red inline-block mt-3 text-3xl">
+              {stack.type}
+            </span>
           </h1>
           <p className="font-monserrat text-slate-gray text-lg leading-8 mt-4 mb-4 sm:max-w-sm lg:max-w-lg">
             {stack.summary}
           </p>
           <article className="flex flex-col justify-start items-start flex-wrap w-full gap-4 mb-6">
-            <div className='flex justify-evenly'>
-                <div className='w-1/2'>
-                  <p className="text-lg font-palanquin font-bold">Potential Downsides</p>
-                  <ul className="leading-7 font-montserrat text-slate-gray w-3/4">
-                      {stack.downsides.map((downside, index) => {
-                      return <li key={index} className='list-disc'>{downside}</li>
-                      })}
-                  </ul>
-                </div>
-                <div className='w-1/2'>
-                  <p className="text-lg font-palanquin font-bold">Potential Benefits</p>
-                  <ul className="leading-7 font-montserrat text-slate-gray w-3/4">
-                      {stack.benefits.map((benefit, index) => {
-                      return <li key={index} className='list-disc'>{benefit}</li>
-                      })}
-                  </ul>
-                </div>
+            <div className="flex justify-evenly">
+              <div className="w-1/2">
+                <p className="text-lg font-palanquin font-bold">
+                  Potential Downsides
+                </p>
+                <ul className="leading-7 font-montserrat text-slate-gray w-3/4">
+                  {stack.downsides.map((downside, index) => {
+                    return (
+                      <li key={index} className="list-disc">
+                        {downside}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              <div className="w-1/2">
+                <p className="text-lg font-palanquin font-bold">
+                  Potential Benefits
+                </p>
+                <ul className="leading-7 font-montserrat text-slate-gray w-3/4">
+                  {stack.benefits.map((benefit, index) => {
+                    return (
+                      <li key={index} className="list-disc">
+                        {benefit}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
-            <div className='flex justify-start items-center w-full'>
-              <div className='mr-40'>
+            <div className="flex justify-start items-center w-full">
+              <div className="mr-40">
                 <p className="text-lg font-palanquin font-bold">Used At</p>
                 <ul className="leading-7 font-montserrat text-slate-gray">
                   {stack.companies.map((company, index) => {
-                    return <li key={index} className='list-disc'>{company}</li>
+                    return (
+                      <li key={index} className="list-disc">
+                        {company}
+                      </li>
+                    );
                   })}
                 </ul>
               </div>
               <a href={stack.learn_link} target="_blank">
-                  <Button label="Learn More" iconUrl={DocIcon} />
+                <Button label="Learn More" iconUrl={DocIcon} />
               </a>
             </div>
           </article>
@@ -65,7 +83,7 @@ const DetailedStackCard = ({stack}) => {
       </section>
       <Footer />
     </section>
-  )
-}
+  );
+};
 
-export default DetailedStackCard
+export default DetailedStackCard;

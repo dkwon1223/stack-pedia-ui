@@ -4,7 +4,6 @@ import Information from "./Components/Information";
 import Footer from "./Components/Footer";
 
 const App = () => {
-
   return (
     <main className="relative">
       <Nav />
@@ -16,7 +15,7 @@ const App = () => {
       </section>
       <Footer />
     </main>
-  )
+  );
 };
 
 export default App;
