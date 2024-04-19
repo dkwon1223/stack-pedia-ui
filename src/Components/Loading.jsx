@@ -14,7 +14,7 @@ const Loading = () => {
         speed="5.0" 
         color="#F87417" 
         ></l-hatch>
-        <h1 className='text-8xl font-bold text-[#F87417] mt-12'>Loading...</h1>
+        <h1 className='lg:text-8xl xsm:text-2xl font-bold text-[#F87417] mt-12'>Loading...</h1>
         <l-hatch
         size="150"
         stroke="20"
