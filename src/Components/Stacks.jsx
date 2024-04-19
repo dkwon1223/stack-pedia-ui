@@ -13,7 +13,7 @@ const Stacks = () => {
 
   const fetchStacks = async (endpoint) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/stacks/${endpoint}`);
+      const response = await fetch(`https://stack-pedia-api.adaptable.app/api/v1/stacks/${endpoint}`);
       if(!response.ok) {
         throw new Error("Failed to retrieve data. Try again later.");
       }
@@ -27,7 +27,7 @@ const Stacks = () => {
 
   const fetchFilteredStacks = async (endpoint) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/stacks/${endpoint}`)
+      const response = await fetch(`https://stack-pedia-api.adaptable.app/api/v1/stacks/${endpoint}`)
       if(!response.ok) {
         throw new Error("Failed to retrieve data. Try again later");
       }

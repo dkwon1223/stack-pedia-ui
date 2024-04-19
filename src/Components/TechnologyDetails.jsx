@@ -12,7 +12,7 @@ const TechnologyDetails = () => {
   const fetchSpecifcTechnology = async (endpoint) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/technologies/${endpoint}`
+        `https://stack-pedia-api.adaptable.app/api/v1/technologies/${endpoint}`
       );
       if (!response.ok) {
         throw new Error("Failed to retrieve data. Try again later.");
