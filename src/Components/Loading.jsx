@@ -1,5 +1,5 @@
-import React from 'react'
-import { hatch } from 'ldrs'
+import React from 'react';
+import { hatch } from 'ldrs';
 
 hatch.register()
 
@@ -25,4 +25,4 @@ const Loading = () => {
   )
 }
 
-export default Loading
+export default Loading;

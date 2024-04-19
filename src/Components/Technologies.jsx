@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Nav from "./Nav";
-import TechFilterBar from "./FilterBar";
+import TechFilterBar from "./TechFilterBar";
 import Footer from "./Footer";
 import Loading from "./Loading";
 
