@@ -10,7 +10,7 @@ const Information = () => {
       id="info"
       className="w-screen flex xl:flex-row flex-col justify-center min-h-screen gap-5 max-container"
     >
-      <figure className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-primary bg-hero bg-cover bg-center">
+      <figure id="infoImage" className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-primary bg-hero bg-cover bg-center">
         <img
           src={StackGraphic}
           alt="developer coding at the computer"
@@ -19,7 +19,7 @@ const Information = () => {
           className="object-contain relative z-10"
         />
       </figure>
-      <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-5 ml-5">
+      <div id="infoText" className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-5 ml-5">
         <h1 className="mt-2 font-palanquin text-4xl max-sm:text-[36px] max-sm:leading-[41px] font-bold">
           <span className="xl:bg-white xl:whitespace-nowrap relative pr-1">
             Tech Stacks...{" "}
