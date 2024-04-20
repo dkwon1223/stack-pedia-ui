@@ -58,11 +58,12 @@ const Stacks = () => {
             fetchFilteredStacks={fetchFilteredStacks}
             setIsFiltered2={setIsFiltered2}
           />)}
-          <section className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-2 mt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
+          <section id="stacksGrid" className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-2 mt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
             {isFiltered2
               ? filteredStacks.map((stack) => {
                   return (
                     <Link
+                      id={stack.name.replace(" ", "")}
                       key={stack.name.toLowerCase()}
                       to={`/stacks/${stack.name.toLowerCase()}`}
                       state={{
@@ -78,6 +79,7 @@ const Stacks = () => {
               : stacks.map((stack) => {
                   return (
                     <Link
+                      id={stack.name.replace(" ", "")}
                       key={stack.name.toLowerCase()}
                       to={`/stacks/${stack.name.toLowerCase()}`}
                       state={{

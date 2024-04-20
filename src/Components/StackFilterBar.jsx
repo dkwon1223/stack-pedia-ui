@@ -19,6 +19,7 @@ const StackFilterBar = ({ stacks, fetchFilteredStacks, setIsFiltered2 }) => {
   return (
     <>
       <button
+        id="stackFilterButton"
         onClick={() => setIsOpen((prev) => !prev)}
         className="lg:w-1/5 sm:w-4/5 flex justify-evenly items-center mt-24 bg-coral-red h-10 rounded-lg border-4 border-transparent active:border-white duration-600 active:text-orange-800 tracking-wider font-palanquin text-white"
       >

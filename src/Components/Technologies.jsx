@@ -64,11 +64,12 @@ const Technologies = () => {
             isFiltered={isFiltered}
             setIsFiltered={setIsFiltered}
           />)}
-          <section className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
+          <section id="technologyGrid" className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
             {isFiltered
               ? filteredTechnologies.map((tech) => {
                   return (
                     <Link
+                      id={tech.name.replace(" ", "")}
                       key={tech.name.toLowerCase()}
                       to={`/technologies/${tech.name.toLowerCase()}`}
                       state={{
@@ -86,6 +87,7 @@ const Technologies = () => {
               : technologies.map((tech) => {
                   return (
                     <Link
+                      id={tech.name.replace(" ", "")}
                       key={tech.name.toLowerCase()}
                       to={`/technologies/${tech.name.toLowerCase()}`}
                       state={{
