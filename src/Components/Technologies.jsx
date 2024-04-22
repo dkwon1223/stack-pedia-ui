@@ -64,11 +64,12 @@ const Technologies = () => {
             isFiltered={isFiltered}
             setIsFiltered={setIsFiltered}
           />)}
-          <section className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
+          <section id="technologyGrid" className="grid lg:grid-cols-4 grid-rows-[auto] auto-rows-fr pt-12 w-full gap-x-5 gap-y-5 px-8 sm:grid-cols-2">
             {isFiltered
               ? filteredTechnologies.map((tech) => {
                   return (
                     <Link
+                      id={tech.name.replace(" ", "")}
                       key={tech.name.toLowerCase()}
                       to={`/technologies/${tech.name.toLowerCase()}`}
                       state={{
@@ -76,7 +77,7 @@ const Technologies = () => {
                           tech.overall_type
                         }/${tech.name.toLowerCase()}`,
                       }}
-                      className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
+                      className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={tech.image_url} className="h-1/2" />
                       <h1 className="font-bold text-center">{tech.name}</h1>
@@ -86,6 +87,7 @@ const Technologies = () => {
               : technologies.map((tech) => {
                   return (
                     <Link
+                      id={tech.name.replace(" ", "")}
                       key={tech.name.toLowerCase()}
                       to={`/technologies/${tech.name.toLowerCase()}`}
                       state={{
@@ -93,7 +95,7 @@ const Technologies = () => {
                           tech.overall_type
                         }/${tech.name.toLowerCase()}`,
                       }}
-                      className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
+                      className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={tech.image_url} className="h-1/2" />
                       <h1 className="font-bold text-center">{tech.name}</h1>
