@@ -69,7 +69,7 @@ const Stacks = () => {
                       state={{
                         specs: `${stack.type}/${stack.name.toLowerCase()}`,
                       }}
-                      className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
+                      className="stackCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={stack.image_url} className="h-1/2" />
                       <h1 className="font-bold text-center">{stack.name}</h1>
@@ -85,7 +85,7 @@ const Stacks = () => {
                       state={{
                         specs: `${stack.type}/${stack.name.toLowerCase()}`,
                       }}
-                      className="flex flex-col justify-evenly items-center max-h-54 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
+                      className="stackCard flex flex-col justify-evenly items-center max-h-54 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={stack.image_url} className="h-auto" />
                       <h1 className="font-bold text-center">{stack.name}</h1>

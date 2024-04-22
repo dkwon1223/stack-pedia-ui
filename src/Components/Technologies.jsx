@@ -77,7 +77,7 @@ const Technologies = () => {
                           tech.overall_type
                         }/${tech.name.toLowerCase()}`,
                       }}
-                      className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
+                      className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={tech.image_url} className="h-1/2" />
                       <h1 className="font-bold text-center">{tech.name}</h1>
@@ -95,7 +95,7 @@ const Technologies = () => {
                           tech.overall_type
                         }/${tech.name.toLowerCase()}`,
                       }}
-                      className="flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
+                      className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={tech.image_url} className="h-1/2" />
                       <h1 className="font-bold text-center">{tech.name}</h1>

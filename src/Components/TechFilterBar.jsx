@@ -42,7 +42,7 @@ const TechFilterBar = ({
                 <button
                   key={index}
                   onClick={() => filterTechnologies(type)}
-                  className="bg-orange-700 w-1/2 rounded-full my-2 font-palanquin text-white"
+                  className="filterOption bg-orange-700 w-1/2 rounded-full my-2 font-palanquin text-white"
                 >
                   {type}
                 </button>

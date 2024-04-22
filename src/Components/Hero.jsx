@@ -22,10 +22,10 @@ const Hero = () => {
           Your destination to evolve as a developer. Innovate and grow your
           tools.
         </p>
-        <a href="#info">
+        <a href="#info" id="heroLearnMoreButton">
           <Button label="Learn More" iconUrl={ArrowIcon} />
         </a>
-        <article className="flex justify-start items-start flex-wrap w-full mt-2 gap-16">
+        <article id="heroStats" className="flex justify-start items-start flex-wrap w-full mt-2 gap-16">
           <div>
             <p className="text-4xl font-palanquin font-bold">40+</p>
             <p className="leading-7 font-montserrat text-slate-gray">

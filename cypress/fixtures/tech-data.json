@@ -1,0 +1,101 @@
+[
+    {
+        "name": "Python",
+        "type": "Programming Language",
+        "overall_type": "languages",
+        "creator": "Guido van Rossum",
+        "compatibilities": ["Django", "Flask", "NumPy", "Pandas"],
+        "date_created": "1991-02-20",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+        "image2_url": "https://cdn.ourcodeworld.com/public-media/articles/articleocw-5c65fbda1ea05.jpg",
+        "use_cases": [
+          "Web Development",
+          "Data Analysis",
+          "Machine Learning",
+          "Automation"
+        ],
+        "documentation_link": "https://docs.python.org/3/",
+        "summary": "Python is a versatile programming language known for its simplicity and readability. It is widely used in web development, data analysis, machine learning, and automation."
+    },
+    {
+        "name": "React",
+        "type": "JavaScript Library",
+        "overall_type": "libraries",
+        "creator": "Facebook",
+        "compatibilities": ["JavaScript", "TypeScript"],
+        "date_created": "2013-05-29",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
+        "image2_url": "https://www.osedea.com/static/50a729cbf01055de07982ec9d064467c/d84c6/lautaro-andreani-xkbaqlcqeb4-unsplash.jpg",
+        "use_cases": [
+          "Single Page Applications",
+          "UI Components",
+          "Frontend Development"
+        ],
+        "documentation_link": "https://react.dev/",
+        "summary": "React is a JavaScript library for building user interfaces, particularly for single-page applications. It is maintained by Facebook and a community of individual developers and companies."
+    },
+    {
+        "name": "Django",
+        "type": "Web Framework",
+        "overall_type": "frameworks",
+        "creator": "Adrian Holovaty, Simon Willison",
+        "compatibilities": ["Python"],
+        "date_created": "2005-07-21",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/1200px-Django_logo.svg.png",
+        "image2_url": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/285622826/original/cf424ced94d6180acc0e71160d8f841aab239121/develop-website-with-django-python-full-stack-developer-fe99.jpg",
+        "use_cases": [
+          "Web Development",
+          "Backend Development",
+          "API Development"
+        ],
+        "documentation_link": "https://docs.djangoproject.com/en/stable/",
+        "summary": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It is used for building web applications, APIs, and content management systems."
+    },
+    {
+        "name": "MySQL",
+        "type": "Relational Database",
+        "overall_type": "databases",
+        "creator": "MySQL AB",
+        "compatibilities": ["PHP", "Java", "Python"],
+        "date_created": "1995-05-23",
+        "image_url": "https://d1.awsstatic.com/asset-repository/products/amazon-rds/1024px-MySQL.ff87215b43fd7292af172e2a5d9b844217262571.png",
+        "image2_url": "https://assets-global.website-files.com/5aa7081220a301f2a3644f3b/5ad1034b0f7efded04f1567e_mysql.jpg",
+        "use_cases": [
+          "Web Applications",
+          "Content Management Systems",
+          "Data Warehousing"
+        ],
+        "documentation_link": "https://dev.mysql.com/doc/",
+        "summary": "MySQL is an open-source relational database management system (RDBMS) developed by MySQL AB, now owned by Oracle Corporation. It is widely used for building web applications, content management systems, and data warehousing solutions."
+    },
+    {
+        "name": "Node.js",
+        "type": "Server-side JavaScript Runtime",
+        "overall_type": "servers",
+        "creator": "Ryan Dahl",
+        "compatibilities": ["Express.js", "Socket.io"],
+        "date_created": "2009-05-27",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png",
+        "image2_url": "https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2024-01-23/node-js-glimpse.jpg",
+        "use_cases": [
+          "Web Applications",
+          "API Services",
+          "Real-time Applications"
+        ],
+        "documentation_link": "https://nodejs.org/en/docs/",
+        "summary": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It is lightweight and efficient, allowing developers to build scalable network applications. It is commonly used for building web servers and real-time applications."
+    },
+    {
+        "name": "Amazon Web Services (AWS)",
+        "type": "Cloud Platform",
+        "overall_type": "clouds",
+        "creator": "Amazon",
+        "compatibilities": ["Various Databases"],
+        "date_created": "2006-03-14",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1920px-Amazon_Web_Services_Logo.svg.png",
+        "image2_url": "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_aws.jpg",
+        "use_cases": ["Cloud Computing", "Web Hosting", "Data Storage"],
+        "documentation_link": "https://docs.aws.amazon.com/",
+        "summary": "Amazon Web Services (AWS) is a comprehensive, evolving cloud computing platform provided by Amazon. It offers a wide range of services including computing power, storage, databases, analytics, machine learning, and more, allowing businesses to scale and grow."
+    }
+]
