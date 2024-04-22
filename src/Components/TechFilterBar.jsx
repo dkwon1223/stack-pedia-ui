@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ArrowDown from "../assets/icons/arrow-down.svg";
+import PropTypes from "prop-types";
 
 const TechFilterBar = ({
   technologies,
@@ -62,3 +63,9 @@ const TechFilterBar = ({
 };
 
 export default TechFilterBar;
+
+TechFilterBar.propTypes = {
+  technologies: PropTypes.array,
+  fetchFilteredTechnologies: PropTypes.func,
+  setIsFiltered: PropTypes.func
+}

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ArrowDown from "../assets/icons/arrow-down.svg";
+import PropTypes from "prop-types";
+
 
 const StackFilterBar = ({ stacks, fetchFilteredStacks, setIsFiltered2 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,3 +60,9 @@ const StackFilterBar = ({ stacks, fetchFilteredStacks, setIsFiltered2 }) => {
 };
 
 export default StackFilterBar;
+
+StackFilterBar.propTypes = {
+  stacks: PropTypes.array,
+  fetchFilteredStacks: PropTypes.func,
+  setIsFiltered2: PropTypes.func
+}

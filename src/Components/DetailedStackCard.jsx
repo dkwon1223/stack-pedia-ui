@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import DocIcon from "../assets/icons/doc-icon.svg";
 import Footer from "./Footer";
+import PropTypes from "prop-types";
 
 const DetailedStackCard = ({ stack }) => {
   return (
@@ -87,3 +88,7 @@ const DetailedStackCard = ({ stack }) => {
 };
 
 export default DetailedStackCard;
+
+DetailedStackCard.propTypes = {
+  stack: PropTypes.object.isRequired
+}

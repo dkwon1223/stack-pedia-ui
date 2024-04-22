@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import DocIcon from "../assets/icons/doc-icon.svg";
 import Footer from "./Footer";
+import PropTypes from "prop-types";
 
 const DetailedTechCard = ({ technology }) => {
   return (
@@ -66,3 +67,7 @@ const DetailedTechCard = ({ technology }) => {
 };
 
 export default DetailedTechCard;
+
+DetailedTechCard.propTypes = {
+  technology: PropTypes.object.isRequired
+}
