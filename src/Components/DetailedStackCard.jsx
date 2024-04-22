@@ -10,7 +10,7 @@ const DetailedStackCard = ({ stack }) => {
         id="stackCard"
         className="w-screen flex xl:flex-row flex-col justify-center gap-10 max-container lg:mt-52 xsm:mt-80 md:mt-96"
       >
-        <figure className="flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-primary bg-hero bg-cover bg-center bg-gradient-to-b-0.2 md:mt-36 lg:mt-0 xsm:mt-12">
+        <figure id="stackCardImage" className="flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-primary bg-hero bg-cover bg-center bg-gradient-to-b-0.2 md:mt-36 lg:mt-0 xsm:mt-12">
           <img
             src={stack.image2_url}
             alt={`cover image showing {${stack.name}}`}
@@ -19,7 +19,7 @@ const DetailedStackCard = ({ stack }) => {
             className="object-contain relative z-10"
           />
         </figure>
-        <article className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x ml-10 xsm:ml-2">
+        <article id="stackCardText" className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x ml-10 xsm:ml-2">
           <h1 className="font-palanquin text-4xl max-sm:text-[36px] max-sm:leading-[41px] font-bold">
             {stack.name}
             <br />
