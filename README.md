@@ -29,7 +29,7 @@ Cypress was implemented for E2E testing. To run tests:
 - Run `git clone` 
 - `cd` into the directory
 - `npm i` to install dependencies
-- `npm start` and open [localhost](http://localhost:5173) in your browser
+- `npm run dev` and open [localhost](http://localhost:5173) in your browser
 - `npm run cypress` will start Cypress and open up test window
 - when finished, run `ctrl + c` to stop running local server
   
