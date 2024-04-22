@@ -15,7 +15,7 @@ StackPedia is the perfect application for developers looking to explore and disc
 
 ## Preview
 ### Deployed Link - [StackPedia](https://stack-pedia-ui.vercel.app/)
-### To Run Locally - Run `npm run dev` in the project root directory
+### To Run Locally - Run `npm install` then `npm run dev` in the project root directory
 
 ## Screenshots
 <img width="772" alt="Screenshot 2024-04-21 at 9 10 50 PM" src="https://github.com/dkwon1223/stack-pedia-ui/assets/112133897/496ceb02-9bbe-4812-9e16-7026bbc62909">
