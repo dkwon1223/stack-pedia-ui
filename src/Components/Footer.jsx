@@ -14,20 +14,6 @@ const Footer = () => {
             StackPedia
           </h1>
         </a>
-        <div className="flex justify-center items-center lg:w-12 lg:h-12 xsm:w-4 xsm:h-4 bg-white rounded-full">
-          <img
-            src={InstagramIcon}
-            alt="Instagram icon"
-            width={24}
-            height={24}
-          />
-        </div>
-        <div className="flex justify-center items-center lg:w-12 lg:h-12 xsm:w-4 xsm:h-4 bg-white rounded-full">
-          <img src={FacebookIcon} alt="Facebook icon" width={24} height={24} />
-        </div>
-        <div className="flex justify-center items-center lg:w-12 lg:h-12 xsm:w-4 xsm:h-4 bg-white rounded-full">
-          <img src={TwitterIcon} alt="Twitter icon" width={24} height={24} />
-        </div>
       </div>
     </footer>
   );
