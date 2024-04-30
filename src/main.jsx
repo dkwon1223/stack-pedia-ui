@@ -14,9 +14,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route index element={<App />} />
         <Route path="/technologies" element={<Technologies />} />
-        <Route path="/technologies/:name" element={<TechnologyDetails />} />
+        <Route path="/technology/:id" element={<TechnologyDetails />} />
         <Route path="/stacks" element={<Stacks />} />
-        <Route path="/stacks/:name" element={<StackDetails />} />
+        <Route path="/stack/:id" element={<StackDetails />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

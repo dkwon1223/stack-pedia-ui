@@ -63,11 +63,11 @@ const Stacks = () => {
               ? filteredStacks.map((stack) => {
                   return (
                     <Link
-                      id={stack.name.replace(" ", "")}
+                      id={stack._id}
                       key={stack.name.toLowerCase()}
-                      to={`/stacks/${stack.name.toLowerCase()}`}
+                      to={`/stack/${stack.name.toLowerCase()}`}
                       state={{
-                        specs: `${stack.type}/${stack.name.toLowerCase()}`,
+                        specs: `${stack._id}`
                       }}
                       className="stackCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
@@ -79,11 +79,11 @@ const Stacks = () => {
               : stacks.map((stack) => {
                   return (
                     <Link
-                      id={stack.name.replace(" ", "")}
+                      id={stack._id}
                       key={stack.name.toLowerCase()}
-                      to={`/stacks/${stack.name.toLowerCase()}`}
+                      to={`/stack/${stack.name.toLowerCase()}`}
                       state={{
-                        specs: `${stack.type}/${stack.name.toLowerCase()}`,
+                        specs: `${stack._id}`
                       }}
                       className="stackCard flex flex-col justify-evenly items-center max-h-54 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >

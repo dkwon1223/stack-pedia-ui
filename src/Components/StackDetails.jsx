@@ -12,7 +12,7 @@ const StackDetails = () => {
   const fetchSpecifcStack = async (endpoint) => {
     try {
       const response = await fetch(
-        `https://stack-pedia-api.adaptable.app/api/v1/stacks/${endpoint}`
+        `https://stack-pedia-api.adaptable.app/api/v1/stack/${endpoint}`
       );
       if (!response.ok) {
         throw new Error("Failed to retrieve data. Try again later.");

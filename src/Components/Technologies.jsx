@@ -69,13 +69,11 @@ const Technologies = () => {
               ? filteredTechnologies.map((tech) => {
                   return (
                     <Link
-                      id={tech.name.replace(" ", "")}
+                      id={tech._id}
                       key={tech.name.toLowerCase()}
-                      to={`/technologies/${tech.name.toLowerCase()}`}
+                      to={`/technology/${tech.name.toLowerCase()}`}
                       state={{
-                        specs: `${
-                          tech.overall_type
-                        }/${tech.name.toLowerCase()}`,
+                        specs: `${tech._id}`
                       }}
                       className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
@@ -87,13 +85,11 @@ const Technologies = () => {
               : technologies.map((tech) => {
                   return (
                     <Link
-                      id={tech.name.replace(" ", "")}
+                      id={tech._id}
                       key={tech.name.toLowerCase()}
-                      to={`/technologies/${tech.name.toLowerCase()}`}
+                      to={`/technology/${tech.name.toLowerCase()}`}
                       state={{
-                        specs: `${
-                          tech.overall_type
-                        }/${tech.name.toLowerCase()}`,
+                        specs: `${tech._id}`
                       }}
                       className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
