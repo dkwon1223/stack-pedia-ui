@@ -3,6 +3,9 @@
 ## About
 StackPedia is the perfect application for developers looking to explore and discover new technologies and expand their knowledge of how their respective technologies can interact in a tech stack.
 
+## Background
+The goal of this project was to develop an application where experienced and beginner developers alike can explore new technologies and gain some basic understanding of them. In additon to this, it aims to motivate developers to take on their new knowledge of a technology and discover how it can become part of a large tech stack for their future projects. The project was built using the MERN stack(MongoDB, Express.js, React, Node.js) and is my first solo fullstack web application. To see more on the backend API, visit the [repository](https://github.com/dkwon1223/stack-pedia-api).
+
 ## Contributors
 - [David Kwon](https://github.com/dkwon1223)
 
@@ -11,7 +14,8 @@ StackPedia is the perfect application for developers looking to explore and disc
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Express](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
-
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 ## Preview
 ### Deployed Link - [StackPedia](https://stack-pedia-ui.vercel.app/)
@@ -32,9 +36,6 @@ Cypress was implemented for E2E testing. To run tests:
 - `npm run dev` and open [localhost](http://localhost:5173) in your browser
 - `npm run cypress` will start Cypress and open up test window
 - when finished, run `ctrl + c` to stop running local server
-  
-## Background
-The goal of this project was to develop an application where experienced and beginner developers alike can explore new technologies and gain some basic understanding of them. In additon to this, it aims to motivate developers to take on their new basic knowledge of a technology and discover how it can become part of a large tech stack for their future projects. 
 
 ## Future Directions
 - Implementing a search feature
