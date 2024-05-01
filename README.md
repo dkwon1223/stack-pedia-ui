@@ -1,10 +1,10 @@
 # StackPedia
 
 ## About
-StackPedia is the perfect application for developers looking to explore and discover new technologies and expand their knowledge of how their respective technologies can interact in a tech stack.
+StackPedia is the perfect application for developers looking to explore and discover new technologies to expand their knowledge of how their respective technologies can interact in a tech stack.
 
 ## Background
-The goal of this project was to develop an application where experienced and beginner developers alike can explore new technologies and gain some basic understanding of them. In additon to this, it aims to motivate developers to take on their new knowledge of a technology and discover how it can become part of a large tech stack for their future projects. The project was built using the MERN stack(MongoDB, Express.js, React, Node.js) and is my first solo fullstack web application. To see more on the backend API, visit the [repository](https://github.com/dkwon1223/stack-pedia-api).
+The goal of this project was to develop an application where experienced and beginner developers alike can explore new technologies and gain some basic understanding of them. In additon to this, it aims to motivate developers to take their new knowledge of a technology and discover how it can become part of a large tech stack for their future projects. The project was built using the MERN stack(MongoDB, Express.js, React, Node.js) and is my first solo fullstack web application. To see more on the backend API, visit the [repository](https://github.com/dkwon1223/stack-pedia-api).
 
 ## Contributors
 - [David Kwon](https://github.com/dkwon1223)
