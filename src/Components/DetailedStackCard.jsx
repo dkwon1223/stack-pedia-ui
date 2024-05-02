@@ -63,7 +63,7 @@ const DetailedStackCard = ({ stack }) => {
               </div>
             </div>
             <div className="flex justify-start items-center w-full">
-              <div className="mr-40">
+              <div className="mr-44">
                 <p className="text-lg font-palanquin font-bold">Used At</p>
                 <ul className="leading-7 font-montserrat text-slate-gray">
                   {stack.companies.map((company, index) => {
