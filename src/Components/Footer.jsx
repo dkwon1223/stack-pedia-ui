@@ -1,7 +1,4 @@
 import React from "react";
-import InstagramIcon from "../assets/icons/instagram.svg";
-import FacebookIcon from "../assets/icons/facebook.svg";
-import TwitterIcon from "../assets/icons/twitter.svg";
 import StackIcon from "../assets/icons/stack-icon.svg";
 
 const Footer = () => {
