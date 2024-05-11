@@ -7,9 +7,9 @@ import TechnologyDetails from "./Components/TechnologyDetails.jsx";
 import Stacks from "./Components/Stacks.jsx";
 import StackDetails from "./Components/StackDetails.jsx";
 import Signup from "./Components/Signup.jsx";
-import Login from "./Components/Login.jsx";
 import { AuthContextProvider } from "./Context/AuthContext.jsx";
 import "./index.css";
+import SignIn from "./Components/SignIn.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/technology/:id" element={<TechnologyDetails />} />
           <Route path="/stacks" element={<Stacks />} />
           <Route path="/stack/:id" element={<StackDetails />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>

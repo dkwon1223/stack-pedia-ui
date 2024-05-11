@@ -36,13 +36,8 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className="font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline ">
-            <NavLink id="loginLink" to="/login">
-              <p className="hover:text-coral-red">Login</p>
-            </NavLink>
-          </li>
-          <li className="font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline ">
-            <NavLink id="loginLink" to="/signup">
-              <p className="hover:text-coral-red">Sign Up</p>
+            <NavLink id="loginLink" to="/signin">
+              <p className="hover:text-coral-red">Sign In</p>
             </NavLink>
           </li>
         </ul>
