@@ -35,6 +35,16 @@ const Nav = () => {
               <p className="hover:text-coral-red">Stacks</p>
             </NavLink>
           </li>
+          <li className="font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline ">
+            <NavLink id="loginLink" to="/login">
+              <p className="hover:text-coral-red">Login</p>
+            </NavLink>
+          </li>
+          <li className="font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline ">
+            <NavLink id="loginLink" to="/signup">
+              <p className="hover:text-coral-red">Sign Up</p>
+            </NavLink>
+          </li>
         </ul>
         <div className="hidden max-lg:block cursor-pointer" onClick={toggleNav}>
           <img
