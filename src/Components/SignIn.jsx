@@ -14,6 +14,8 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setEmail("");
+    setPassword("");
     await login(email, password);
   };
 
