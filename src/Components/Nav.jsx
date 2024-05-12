@@ -48,6 +48,11 @@ const Nav = () => {
               <p className="hover:text-coral-red">Stacks</p>
             </NavLink>
           </li>
+          <li className="font-monserrat leading-normal text-lg font-bold text-slate-gray cursor-pointer hover:underline ">
+            <NavLink id="navStackLink" to="/favorites">
+              <p className="hover:text-coral-red">Favorites</p>
+            </NavLink>
+          </li>
           {!user && (
             <li className="font-monserrat leading-normal text-lg font-bold text-slate-gray cursor-pointer hover:underline ">
               <NavLink id="loginLink" to="/signin">
