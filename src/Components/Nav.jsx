@@ -50,7 +50,7 @@ const Nav = () => {
               <p className="hover:text-coral-red">Sign In</p>
             </NavLink>
           </li>
-          <div className="flex">
+          <div onClick={handleLogout} className="flex">
             <Button label="Log Out" iconUrl={LogOutIcon} onClick={handleLogout}/>
           </div>
         </ul>
