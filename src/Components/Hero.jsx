@@ -23,7 +23,7 @@ const Hero = () => {
           tools.
         </p>
         <a href="#info" id="heroLearnMoreButton">
-          <Button label="Learn More" iconUrl={ArrowIcon} />
+          <Button label="Learn More" iconUrl={ArrowIcon}/>
         </a>
         <article id="heroStats" className="flex justify-start items-start flex-wrap w-full mt-2 gap-16">
           <div>

@@ -1,14 +1,24 @@
 import React from "react";
 import StackIcon from "../assets/icons/stack-icon.svg";
 import hamburger from "../assets/icons/hamburger.svg";
+import LogOutIcon from "../assets/icons/logout-icon.svg";
+import Button from "./Button";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useLogout } from "../Hooks/useLogout";
 
 const Nav = () => {
   const [openNavigation, setNavigation] = useState(false);
+  const { logout } = useLogout();
+
   function toggleNav() {
     setNavigation(!openNavigation);
   }
+  
+  const handleLogout = () => {
+    logout();
+  }
+
   return (
     <header className="pl-10 pr-10 py-8 absolute z-10 w-full">
       <nav className="flex justify-between items-center max-container">
@@ -40,7 +50,11 @@ const Nav = () => {
               <p className="hover:text-coral-red">Sign In</p>
             </NavLink>
           </li>
+          <div className="flex">
+            <Button label="Log Out" iconUrl={LogOutIcon} onClick={handleLogout}/>
+          </div>
         </ul>
+        
         <div className="hidden max-lg:block cursor-pointer" onClick={toggleNav}>
           <img
             src={hamburger}
