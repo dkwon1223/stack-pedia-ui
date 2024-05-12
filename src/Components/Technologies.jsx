@@ -71,11 +71,7 @@ const Technologies = () => {
                     <Link
                       id={tech._id}
                       key={tech.name.toLowerCase()}
-                      // to={`/technology/${tech.name.toLowerCase().replaceAll(" ", "-")}`}
                       to={`/technology/${tech._id}`}
-                      state={{
-                        specs: `${tech._id}`
-                      }}
                       className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={tech.image_url} className="h-1/2" />
@@ -88,11 +84,7 @@ const Technologies = () => {
                     <Link
                       id={tech._id}
                       key={tech.name.toLowerCase()}
-                      // to={`/technology/${tech.name.toLowerCase().replaceAll(" ", "-")}`}
                       to={`/technology/${tech._id}`}
-                      state={{
-                        specs: `${tech._id}`
-                      }}
                       className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={tech.image_url} className="h-1/2" />

@@ -66,9 +66,6 @@ const Stacks = () => {
                       id={stack._id}
                       key={stack.name.toLowerCase()}
                       to={`/stack/${stack._id}`}
-                      state={{
-                        specs: `${stack._id}`
-                      }}
                       className="stackCard flex flex-col justify-evenly items-center border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={stack.image_url} className="h-1/2" />
@@ -82,9 +79,6 @@ const Stacks = () => {
                       id={stack._id}
                       key={stack.name.toLowerCase()}
                       to={`/stack/${stack._id}`}
-                      state={{
-                        specs: `${stack._id}`
-                      }}
                       className="stackCard flex flex-col justify-evenly items-center border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={stack.image_url} className="h-auto" />
