@@ -65,7 +65,7 @@ const Stacks = () => {
                     <Link
                       id={stack._id}
                       key={stack.name.toLowerCase()}
-                      to={`/stack/${stack.name.toLowerCase().replaceAll(" ", "-")}`}
+                      to={`/stack/${stack._id}`}
                       state={{
                         specs: `${stack._id}`
                       }}
@@ -81,7 +81,7 @@ const Stacks = () => {
                     <Link
                       id={stack._id}
                       key={stack.name.toLowerCase()}
-                      to={`/stack/${stack.name.toLowerCase().replaceAll(" ", "-")}`}
+                      to={`/stack/${stack._id}`}
                       state={{
                         specs: `${stack._id}`
                       }}

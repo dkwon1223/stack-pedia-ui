@@ -71,7 +71,8 @@ const Technologies = () => {
                     <Link
                       id={tech._id}
                       key={tech.name.toLowerCase()}
-                      to={`/technology/${tech.name.toLowerCase().replaceAll(" ", "-")}`}
+                      // to={`/technology/${tech.name.toLowerCase().replaceAll(" ", "-")}`}
+                      to={`/technology/${tech._id}`}
                       state={{
                         specs: `${tech._id}`
                       }}
@@ -87,7 +88,8 @@ const Technologies = () => {
                     <Link
                       id={tech._id}
                       key={tech.name.toLowerCase()}
-                      to={`/technology/${tech.name.toLowerCase().replaceAll(" ", "-")}`}
+                      // to={`/technology/${tech.name.toLowerCase().replaceAll(" ", "-")}`}
+                      to={`/technology/${tech._id}`}
                       state={{
                         specs: `${tech._id}`
                       }}

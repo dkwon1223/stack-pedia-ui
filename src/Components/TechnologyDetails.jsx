@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import DetailedTechCard from "./DetailedTechCard";
 import Nav from "./Nav";
 import Loading from "./Loading";
 
 const TechnologyDetails = () => {
-  const location = useLocation();
-  const { specs } = location.state;
+  const { id } = useParams();
   const [technology, setTechnology] = useState();
 
   const fetchSpecifcTechnology = async (endpoint) => {
@@ -26,7 +25,7 @@ const TechnologyDetails = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetchSpecifcTechnology(specs);
+      fetchSpecifcTechnology(id);
     }, 2000);
   }, []);
 

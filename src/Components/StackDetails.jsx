@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import DetailedStackCard from "./DetailedStackCard";
 import Nav from "./Nav";
 import Loading from "./Loading";
 
 const StackDetails = () => {
-  const location = useLocation();
-  const { specs } = location.state;
+  const { id } = useParams();
   const [stack, setStack] = useState();
 
   const fetchSpecifcStack = async (endpoint) => {
@@ -26,7 +25,7 @@ const StackDetails = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetchSpecifcStack(specs);
+      fetchSpecifcStack(id);
     }, 2000);
   }, []);
 
