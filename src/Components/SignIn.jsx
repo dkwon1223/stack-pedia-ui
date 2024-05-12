@@ -5,14 +5,16 @@ import LoginIcon from "../assets/icons/login-icon.svg";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { useLogin } from "../Hooks/useLogin";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { login, error, isLoading } = useLogin();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password);
+    await login(email, password);
   };
 
   return (
@@ -76,7 +78,8 @@ const SignIn = () => {
               </div>
             </div>
             <div className="flex w-full justify-center">
-              <Button label="Sign In" iconUrl={LoginIcon}/>
+              {error && <p className="font-bold text-red-600 text-md mb-4">{error}</p>}
+              <Button label="Sign In" iconUrl={LoginIcon} disabled={isLoading}/>
             </div>
           </form>
 
