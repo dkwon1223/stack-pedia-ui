@@ -25,17 +25,17 @@ const Nav = () => {
               : "max-lg:hidden"
           }`}
         >
-          <li className="font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline">
+          <li className="font-monserrat leading-normal text-lg font-bold text-slate-gray cursor-pointer hover:underline">
             <NavLink id="navTechLink" to="/technologies">
               <p className="hover:text-coral-red">Technologies</p>
             </NavLink>
           </li>
-          <li className="font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline ">
+          <li className="font-monserrat leading-normal text-lg font-bold text-slate-gray cursor-pointer hover:underline ">
             <NavLink id="navStackLink" to="/stacks">
               <p className="hover:text-coral-red">Stacks</p>
             </NavLink>
           </li>
-          <li className="font-monserrat leading-normal text-lg text-slate-gray cursor-pointer hover:underline ">
+          <li className="font-monserrat leading-normal text-lg font-bold text-slate-gray cursor-pointer hover:underline ">
             <NavLink id="loginLink" to="/signin">
               <p className="hover:text-coral-red">Sign In</p>
             </NavLink>
