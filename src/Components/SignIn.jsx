@@ -6,23 +6,26 @@ import Button from "./Button";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import { useLogin } from "../Hooks/useLogin";
+import { useAuthContext } from "../Hooks/useAuthContext";
+import Loading from "./Loading";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, error, isLoading } = useLogin();
+  const { user } = useAuthContext();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setEmail("");
     setPassword("");
-    await login(email, password);
+    await login(email, password); 
   };
 
   return (
     <section className="h-screen w-full">
       <Nav />
-      <div className="flex min-h-full flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8">
+      {!user ? (<div className="flex min-h-full flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm mt-12">
           <img
             className="mx-auto h-14 w-auto"
@@ -79,8 +82,8 @@ const SignIn = () => {
                 />
               </div>
             </div>
-            <div className="flex w-full justify-center">
-              {error && <p className="font-bold text-red-600 text-md mb-4">{error}</p>}
+            <div className="flex flex-col w-full justify-center items-center">
+              {error && <p className="font-bold text-red-600 text-lg mb-4">{error}</p>}
               <Button label="Sign In" iconUrl={LoginIcon} disabled={isLoading}/>
             </div>
           </form>
@@ -95,7 +98,7 @@ const SignIn = () => {
             </Link>
           </p>
         </div>
-      </div>
+      </div>) : <Loading text="Login successful...redirecting"/>}
       <Footer />
     </section>
   );

@@ -5,24 +5,28 @@ import Button from "./Button";
 import SignUpIcon from "../assets/icons/sign-up-icon.svg";
 import Footer from "./Footer";
 import { useSignup } from "../Hooks/useSignup";
+import { useAuthContext } from "../Hooks/useAuthContext";
+import Loading from "./Loading";
 
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const  { signup, error, isLoading } = useSignup();
+  const { user } = useAuthContext();
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setEmail("");
     setPassword("");
     await signup(email, password);
-  };
+  }
 
   return (
     <section className="h-screen w-full">
       <Nav />
-      <div className="flex min-h-full flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8">
+      {!user ? (<div className="flex min-h-full flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm mt-12">
           <img
             className="mx-auto h-14 w-auto"
@@ -80,12 +84,12 @@ const Signup = () => {
               </div>
             </div>
             <div className="flex flex-col w-full justify-center items-center">
-              {error && <p className="font-bold text-red-600 text-md mb-4">{error}</p>}
+              {error && <p className="font-bold text-red-600 text-lg mb-4">{error}</p>}
               <Button label="Sign Up" iconUrl={SignUpIcon} disabled={isLoading}/>
             </div>
           </form>
         </div>
-      </div>
+      </div>) : <Loading text="Account created...redirecting"/>}
       <Footer />
     </section>
   );
