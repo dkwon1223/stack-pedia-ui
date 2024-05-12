@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Nav from "./Nav";
-import Button from "./Button";
-import LoginIcon from "../assets/icons/login-icon.svg";
 import StackIcon from "../assets/icons/stack-icon.svg";
+import LoginIcon from "../assets/icons/login-icon.svg";
+import Button from "./Button";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -18,18 +19,18 @@ const SignIn = () => {
     <section className="h-screen w-full">
       <Nav />
       <div className="flex min-h-full flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm mt-12">
           <img
-            className="mx-auto h-10 w-auto"
+            className="mx-auto h-14 w-auto"
             src={StackIcon}
             alt="StackPedia Logo"
           />
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          <h2 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
             Sign in to your account
           </h2>
         </div>
 
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm flex flex-col items-center">
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm flex flex-col">
           <form className="space-y-6" action="#" method="POST" onSubmit={handleSubmit}>
             <div>
               <label
@@ -74,10 +75,12 @@ const SignIn = () => {
                 />
               </div>
             </div>
-            <Button label="Sign In" iconUrl={LoginIcon}/>
+            <div className="flex w-full justify-center">
+              <Button label="Sign In" iconUrl={LoginIcon}/>
+            </div>
           </form>
 
-          <p className="mt-10 text-center text-sm text-gray-500">
+          <p className="mt-10 text-center text-md text-gray-500">
             Not a member?{" "}
             <Link
               to="/signup"
@@ -88,6 +91,7 @@ const SignIn = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };
