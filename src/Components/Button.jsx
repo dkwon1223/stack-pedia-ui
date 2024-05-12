@@ -1,9 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-const Button = ({ label, iconUrl }) => {
+const Button = ({ label, iconUrl, disabled=false }) => {
   return (
-    <button className="flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none bg-coral-red rounded-full text-white border-coral-red mb-5">
+    <button 
+    className={`flex justify-center h-12 items-center gap-2 px-7 border font-montserrat text-lg leading-none bg-coral-red rounded-full text-white border-coral-red`}
+    disabled={disabled}
+    >
       {label}
       <img
         src={iconUrl}
