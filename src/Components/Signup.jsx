@@ -4,15 +4,17 @@ import StackIcon from "../assets/icons/stack-icon.svg";
 import Button from "./Button";
 import SignUpIcon from "../assets/icons/sign-up-icon.svg";
 import Footer from "./Footer";
+import { useSignup } from "../Hooks/useSignup";
 
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const  { signup, error, isLoading } = useSignup();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password);
+    await signup(email, password);
   };
 
   return (
@@ -75,8 +77,9 @@ const Signup = () => {
                 />
               </div>
             </div>
-            <div className="flex w-full justify-center">
-              <Button label="Sign Up" iconUrl={SignUpIcon}/>
+            <div className="flex flex-col w-full justify-center items-center">
+              {error && <p className="font-bold text-red-600 text-md mb-4">{error}</p>}
+              <Button label="Sign Up" iconUrl={SignUpIcon} disabled={isLoading}/>
             </div>
           </form>
         </div>
