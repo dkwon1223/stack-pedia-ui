@@ -71,7 +71,7 @@ const Technologies = () => {
                     <Link
                       id={tech._id}
                       key={tech.name.toLowerCase()}
-                      to={`/technology/${tech._id}`}
+                      to={`/technologies/${tech._id}`}
                       className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={tech.image_url} className="h-1/2" />
@@ -84,7 +84,7 @@ const Technologies = () => {
                     <Link
                       id={tech._id}
                       key={tech.name.toLowerCase()}
-                      to={`/technology/${tech._id}`}
+                      to={`/technologies/${tech._id}`}
                       className="techCard flex flex-col justify-evenly items-center max-h-44 border-2 rounded-lg px-2 hover:hover:bg-orange-300 hover:scale-110 cursor-pointer hover:shadow-xl"
                     >
                       <img src={tech.image_url} className="h-1/2" />

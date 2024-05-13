@@ -42,7 +42,7 @@ const Favorites = () => {
   return (
     <section className="flex flex-col items-center h-screen">
       <Nav />
-      {currentUser ? (<section className="flex w-full screen-full flex-col items-center justify-normal mt-20">
+      {currentUser ? (<section className="flex w-full screen-full flex-col items-center justify-normal mt-28">
         <h3 className="mb-0 font-palanquin text-3xl max-sm:text-[36px] max-sm:leading-[41px] font-bold">Favorite <span className="text-coral-red inline-block mt-3">technologies</span></h3>
         {currentUser.favoriteTechs.length > 0 ? (
           <ul

@@ -12,7 +12,6 @@ const DetailedTechCard = ({ technology }) => {
   const  { favoriteTech } = useFavoriteTech();
   const { user } = useAuthContext();
   
- 
   function handleFavorite() {
     if(user.token) {
       const decode = jwtDecode(user.token)
