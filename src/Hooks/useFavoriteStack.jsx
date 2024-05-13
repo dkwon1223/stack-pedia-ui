@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { useAuthContext } from "./useAuthContext";
 
-export const useLogin = () => {
+export const useFavoriteStack = () => {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(null);
     const { dispatch } = useAuthContext();
 
-    const login = async (email, password) => {
+    const favoriteStack = async (stack, userId) => {
         setIsLoading(true);
         setError(null);
-        
-        const response = await fetch("https://stack-pedia-api.adaptable.app/api/v1/user/login", {
-            method: "POST",
+
+        const response = await fetch(`https://stack-pedia-api.adaptable.app/api/v1/user/add/favstack/${userId}`, {
+            method: "PATCH",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({ email, password })
+            body: JSON.stringify(stack)
         })
         const json = await response.json();
 
@@ -22,13 +22,12 @@ export const useLogin = () => {
             setError(json.error);
         }
         if(response.ok) {
-            // save user to local storage
-            localStorage.setItem("user", JSON.stringify(json))
+            localStorage.setItem("user", JSON.stringify(json));
             // update auth context
-            dispatch({ type: "LOGIN", payload: json })
+            dispatch({ type: "FAVSTACK", payload: JSON.stringify(stack) })
             setIsLoading(false)
         }
     }
     
-    return { login, isLoading, error }
+    return { favoriteStack, isLoading, error }
 }
