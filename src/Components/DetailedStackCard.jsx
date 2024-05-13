@@ -58,7 +58,9 @@ const DetailedStackCard = ({ stack }) => {
   };
 
   useEffect(() => {
-    handleUser();
+    if(user) {
+      handleUser();
+    }
   }, []);
 
   return (
@@ -140,7 +142,7 @@ const DetailedStackCard = ({ stack }) => {
               <a href={stack.learn_link} target="_blank" className="mr-4">
                 <Button label="Learn More" iconUrl={DocIcon} />
               </a>
-              {user && !favorite ? (
+              {user && (!favorite ? (
                 <div onClick={handleFavorite} className="mr-4 pr-4">
                   <Button label="Favorite this" iconUrl={FavIcon} />
                 </div>
@@ -154,7 +156,7 @@ const DetailedStackCard = ({ stack }) => {
                     color="orange-700"
                   />
                 </div>
-              )}
+              ))}
             </div>
           </article>
         </article>

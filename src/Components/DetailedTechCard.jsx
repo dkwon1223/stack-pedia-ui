@@ -57,7 +57,9 @@ const DetailedTechCard = ({ technology }) => {
   };
 
   useEffect(() => {
-    handleUser();
+    if(user) {
+      handleUser();
+    }
   }, []);
 
   return (
@@ -124,7 +126,7 @@ const DetailedTechCard = ({ technology }) => {
           >
             <Button label="Visit Documentation" iconUrl={DocIcon} />
           </a>
-          {user && !favorite ? (
+          {user && (!favorite ? (
             <div onClick={handleFavorite} className="mb-4">
               <Button label="Favorite this" iconUrl={FavIcon} />
             </div>
@@ -137,7 +139,7 @@ const DetailedTechCard = ({ technology }) => {
                 color="orange-700"
               />
             </div>
-          )}
+          ))}
         </article>
       </section>
       <Footer />
