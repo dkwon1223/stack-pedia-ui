@@ -8,11 +8,13 @@ import UserIcon from "../assets/icons/user-icon.svg";
 import Button from "./Button";
 import { useLogout } from "../Hooks/useLogout";
 import { useAuthContext } from "../Hooks/useAuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const [openNavigation, setNavigation] = useState(false);
   const { logout } = useLogout();
   const { user } = useAuthContext();
+  const navigate = useNavigate();
 
   function toggleNav() {
     setNavigation(!openNavigation);
@@ -20,6 +22,7 @@ const Nav = () => {
 
   const handleLogout = () => {
     logout();
+    navigate("/")
   };
 
   return (
