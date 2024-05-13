@@ -36,15 +36,15 @@ const DetailedStackCard = ({ stack }) => {
   };
 
   function handleFavorite() {
+    setFavorite(true);
     if (user.token) {
       const decode = jwtDecode(userLocal.token);
       const loggedInId = decode._id;
       favoriteStack(stack, loggedInId);
-      setFavorite(true);
     } else {
       favoriteStack(stack, userLocal._id);
-      setFavorite(true);
     }
+    
   }
 
   const handleUser = () => {
@@ -59,7 +59,7 @@ const DetailedStackCard = ({ stack }) => {
 
   useEffect(() => {
     handleUser();
-  }, [favorite]);
+  }, []);
 
   return (
     <section>

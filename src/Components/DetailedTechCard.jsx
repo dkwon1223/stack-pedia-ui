@@ -36,14 +36,13 @@ const DetailedTechCard = ({ technology }) => {
   };
 
   function handleFavorite() {
+    setFavorite(true);
     if (user.token) {
       const decode = jwtDecode(userLocal.token);
       const loggedInId = decode._id;
       favoriteTech(technology, loggedInId);
-      setFavorite(true);
     } else {
       favoriteTech(technology, userLocal._id);
-      setFavorite(true);
     }
   }
 
@@ -59,7 +58,7 @@ const DetailedTechCard = ({ technology }) => {
 
   useEffect(() => {
     handleUser();
-  }, [favorite]);
+  }, []);
 
   return (
     <section>
@@ -126,11 +125,11 @@ const DetailedTechCard = ({ technology }) => {
             <Button label="Visit Documentation" iconUrl={DocIcon} />
           </a>
           {user && !favorite ? (
-            <div onClick={handleFavorite}>
+            <div onClick={handleFavorite} className="mb-4">
               <Button label="Favorite this" iconUrl={FavIcon} />
             </div>
           ) : (
-            <div onClick={handleFavorite}>
+            <div onClick={handleFavorite} className="mb-4">
               <Button
                 label="Already favorited"
                 iconUrl={FavIcon}
