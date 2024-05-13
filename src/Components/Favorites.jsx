@@ -47,25 +47,17 @@ const Favorites = () => {
         {currentUser.favoriteTechs.length > 0 ? (
           <ul
             role="list"
-            className="pt-2 w-full grid grid-cols-4 gap-x-4 gap-y-8 sm:grid-cols-5 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+            className="py-12 w-full grid grid-cols-4 gap-x-4 gap-y-8 sm:grid-cols-5 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
           >
             {currentUser.favoriteTechs.map((tech) => (
               <Link to={`/technologies/${tech._id}`}>
                 <li key={tech._id} className="relative">
-                  <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-orange-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+                  <div className="group aspect-h-4 aspect-w-8 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-orange-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                     <img
                       src={tech.image_url}
                       alt=""
                       className="pointer-events-none object-contain group-hover:opacity-75"
                     />
-                    <button
-                      type="button"
-                      className="absolute inset-0 focus:outline-none"
-                    >
-                      <span className="sr-only">
-                        View details for {tech.name}
-                      </span>
-                    </button>
                   </div>
                 </li>
               </Link>
@@ -80,25 +72,17 @@ const Favorites = () => {
         {currentUser.favoriteStacks.length > 0 ? (
           <ul
             role="list"
-            className="pt-2 w-full grid grid-cols-4 gap-x-4 gap-y-8 sm:grid-cols-5 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+            className="py-12 w-full grid grid-cols-4 gap-x-4 gap-y-8 sm:grid-cols-5 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
           >
             {currentUser.favoriteStacks.map((stack) => (
               <Link to={`/stacks/${stack._id}`}>
                 <li key={stack._id} className="relative">
-                  <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-orange-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+                  <div className="group aspect-h-4 aspect-w-8 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-orange-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                     <img
                       src={stack.image_url}
                       alt=""
                       className="pointer-events-none object-contain group-hover:opacity-75"
                     />
-                    <button
-                      type="button"
-                      className="absolute inset-0 focus:outline-none"
-                    >
-                      <span className="sr-only">
-                        View details for {stack.name}
-                      </span>
-                    </button>
                   </div>
                 </li>
               </Link>

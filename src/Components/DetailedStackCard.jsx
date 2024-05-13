@@ -1,17 +1,37 @@
 import React from "react";
 import Button from "./Button";
 import DocIcon from "../assets/icons/doc-icon.svg";
+import FavIcon from "../assets/icons/favorite-icon.svg";
 import Footer from "./Footer";
 import PropTypes from "prop-types";
+import { useFavoriteStack } from "../Hooks/useFavoriteStack";
+import { useAuthContext } from "../Hooks/useAuthContext";
+import { jwtDecode } from "jwt-decode";
 
 const DetailedStackCard = ({ stack }) => {
+  const { favoriteStack } = useFavoriteStack();
+  const { user } = useAuthContext();
+
+  function handleFavorite() {
+    if (user.token) {
+      const decode = jwtDecode(user.token);
+      const loggedInId = decode._id;
+      favoriteStack(stack, loggedInId);
+    } else {
+      favoriteStack(stack, user._id);
+    }
+  }
+
   return (
     <section>
       <section
         id="stackCard"
         className="w-screen flex xl:flex-row flex-col justify-center gap-10 max-container lg:mt-52 xsm:mt-80 md:mt-96"
       >
-        <figure id="stackCardImage" className="flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-primary bg-hero bg-cover bg-center bg-gradient-to-b-0.2 md:mt-36 lg:mt-0 xsm:mt-12">
+        <figure
+          id="stackCardImage"
+          className="flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-primary bg-hero bg-cover bg-center bg-gradient-to-b-0.2 md:mt-36 lg:mt-0 xsm:mt-12"
+        >
           <img
             src={stack.image2_url}
             alt={`cover image showing {${stack.name}}`}
@@ -20,7 +40,10 @@ const DetailedStackCard = ({ stack }) => {
             className="object-contain relative z-10"
           />
         </figure>
-        <article id="stackCardText" className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x ml-10 xsm:ml-2">
+        <article
+          id="stackCardText"
+          className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x ml-10 xsm:ml-2"
+        >
           <h1 className="font-palanquin text-4xl max-sm:text-[36px] max-sm:leading-[41px] font-bold">
             {stack.name}
             <br />
@@ -63,7 +86,7 @@ const DetailedStackCard = ({ stack }) => {
               </div>
             </div>
             <div className="flex justify-start items-center w-full">
-              <div className="mr-44">
+              <div className="mr-24">
                 <p className="text-lg font-palanquin font-bold">Used At</p>
                 <ul className="leading-7 font-montserrat text-slate-gray">
                   {stack.companies.map((company, index) => {
@@ -75,9 +98,14 @@ const DetailedStackCard = ({ stack }) => {
                   })}
                 </ul>
               </div>
-              <a href={stack.learn_link} target="_blank">
+              <a href={stack.learn_link} target="_blank" className="mr-4">
                 <Button label="Learn More" iconUrl={DocIcon} />
               </a>
+              {user && (
+                <div onClick={handleFavorite} className="mr-4 pr-4">
+                  <Button label="Favorite this" iconUrl={FavIcon} />
+                </div>
+              )}
             </div>
           </article>
         </article>
@@ -90,5 +118,5 @@ const DetailedStackCard = ({ stack }) => {
 export default DetailedStackCard;
 
 DetailedStackCard.propTypes = {
-  stack: PropTypes.object.isRequired
-}
+  stack: PropTypes.object.isRequired,
+};
