@@ -28,10 +28,7 @@ const DetailedTechCard = ({ technology }) => {
       const userFavoriteIds = await techList.map((tech) => {
         return tech._id;
       });
-      console.log(userFavoriteIds);
-      console.log(technology._id);
       const isFavorite = await userFavoriteIds.includes(technology._id);
-      console.log(isFavorite);
       setFavorite(isFavorite);
     } catch (error) {
       console.log(Error, error);
@@ -134,7 +131,12 @@ const DetailedTechCard = ({ technology }) => {
             </div>
           ) : (
             <div onClick={handleFavorite}>
-              <Button label="Already favorited" iconUrl={FavIcon} disabled={true} color="orange-700"/>
+              <Button
+                label="Already favorited"
+                iconUrl={FavIcon}
+                disabled={true}
+                color="orange-700"
+              />
             </div>
           )}
         </article>

@@ -7,20 +7,59 @@ import PropTypes from "prop-types";
 import { useFavoriteStack } from "../Hooks/useFavoriteStack";
 import { useAuthContext } from "../Hooks/useAuthContext";
 import { jwtDecode } from "jwt-decode";
+import { useState, useEffect } from "react";
 
 const DetailedStackCard = ({ stack }) => {
   const { favoriteStack } = useFavoriteStack();
   const { user } = useAuthContext();
+  const [favorite, setFavorite] = useState(false);
+  const userLocal = JSON.parse(localStorage.getItem("user"));
+
+  const fetchUserFav = async (endpoint) => {
+    try {
+      const response = await fetch(
+        `https://stack-pedia-api.adaptable.app/api/v1/user/${endpoint}`
+      );
+      if (!response.ok) {
+        throw new Error("Failed to retrieve data. Try again later.");
+      }
+      const data = await response.json();
+      const stackList = await data.favoriteStacks;
+      const userFavoriteIds = await stackList.map((stack) => {
+        return stack._id;
+      });
+      const isFavorite = await userFavoriteIds.includes(stack._id);
+      setFavorite(isFavorite);
+    } catch (error) {
+      console.log(Error, error);
+    }
+  };
 
   function handleFavorite() {
     if (user.token) {
-      const decode = jwtDecode(user.token);
+      const decode = jwtDecode(userLocal.token);
       const loggedInId = decode._id;
       favoriteStack(stack, loggedInId);
+      setFavorite(true);
     } else {
-      favoriteStack(stack, user._id);
+      favoriteStack(stack, userLocal._id);
+      setFavorite(true);
     }
   }
+
+  const handleUser = () => {
+    if (userLocal.token) {
+      const decode = jwtDecode(userLocal.token);
+      const loggedInId = decode._id;
+      fetchUserFav(loggedInId);
+    } else {
+      fetchUserFav(userLocal._id);
+    }
+  };
+
+  useEffect(() => {
+    handleUser();
+  }, [favorite]);
 
   return (
     <section>
@@ -101,9 +140,19 @@ const DetailedStackCard = ({ stack }) => {
               <a href={stack.learn_link} target="_blank" className="mr-4">
                 <Button label="Learn More" iconUrl={DocIcon} />
               </a>
-              {user && (
+              {user && !favorite ? (
                 <div onClick={handleFavorite} className="mr-4 pr-4">
                   <Button label="Favorite this" iconUrl={FavIcon} />
+                </div>
+              ) : (
+                <div onClick={handleFavorite}>
+                  <Button
+                    className="mr-4 pr-4"
+                    label="Already favorited"
+                    iconUrl={FavIcon}
+                    disabled={true}
+                    color="orange-700"
+                  />
                 </div>
               )}
             </div>
