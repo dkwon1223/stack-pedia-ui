@@ -11,7 +11,7 @@ const Favorites = () => {
   const fetchUser = async (endpoint) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/user/${endpoint}`
+        `https://stack-pedia-api.adaptable.app/api/v1/user/${endpoint}`
       );
       if (!response.ok) {
         throw new Error("Failed to retrieve data. Try again later.");

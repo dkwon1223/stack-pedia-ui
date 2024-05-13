@@ -10,7 +10,7 @@ export const useFavoriteStack = () => {
         setIsLoading(true);
         setError(null);
 
-        const response = await fetch(`http://localhost:8080/api/v1/user/add/favstack/${userId}`, {
+        const response = await fetch(`https://stack-pedia-api.adaptable.app/api/v1/user/add/favstack/${userId}`, {
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(stack)
