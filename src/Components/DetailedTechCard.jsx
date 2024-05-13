@@ -1,10 +1,28 @@
 import React from "react";
 import Button from "./Button";
 import DocIcon from "../assets/icons/doc-icon.svg";
+import FavIcon from "../assets/icons/favorite-icon.svg";
 import Footer from "./Footer";
 import PropTypes from "prop-types";
+import { useFavoriteTech } from "../Hooks/useFavoriteTech";
+import { useAuthContext } from "../Hooks/useAuthContext";
+import { jwtDecode } from "jwt-decode";
 
 const DetailedTechCard = ({ technology }) => {
+  const  { favoriteTech } = useFavoriteTech();
+  const { user } = useAuthContext();
+  
+ 
+  function handleFavorite() {
+    if(user.token) {
+      const decode = jwtDecode(user.token)
+      const loggedInId = decode._id
+      favoriteTech(technology, loggedInId);
+    } else {
+      favoriteTech(technology, user._id);
+    }
+  }
+
   return (
     <section>
       <section
@@ -56,9 +74,12 @@ const DetailedTechCard = ({ technology }) => {
               </ul>
             </div>
           </article>
-          <a href={technology.documentation_link} target="_blank">
+          <a href={technology.documentation_link} target="_blank" className="mb-4">
             <Button label="Visit Documentation" iconUrl={DocIcon} />
           </a>
+          {user && (<div onClick={handleFavorite}>
+            <Button label="Favorite this" iconUrl={FavIcon}/>
+          </div>)}
         </article>
       </section>
       <Footer />

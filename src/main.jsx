@@ -19,9 +19,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Routes>
           <Route index element={<App />} />
           <Route path="/technologies" element={<Technologies />} />
-          <Route path="/technology/:id" element={<TechnologyDetails />} />
+          <Route path="/technologies/:id" element={<TechnologyDetails />} />
           <Route path="/stacks" element={<Stacks />} />
-          <Route path="/stack/:id" element={<StackDetails />} />
+          <Route path="/stacks/:id" element={<StackDetails />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<Signup />} />

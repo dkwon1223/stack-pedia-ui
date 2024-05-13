@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { useAuthContext } from "./useAuthContext";
 
-export const useLogin = () => {
+export const useFavoriteTech = () => {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(null);
     const { dispatch } = useAuthContext();
 
-    const login = async (email, password) => {
+    const favoriteTech = async (tech, userId) => {
         setIsLoading(true);
         setError(null);
-        
-        const response = await fetch("http://localhost:8080/api/v1/user/login", {
-            method: "POST",
+
+        const response = await fetch(`http://localhost:8080/api/v1/user/add/favtech/${userId}`, {
+            method: "PATCH",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({ email, password })
+            body: JSON.stringify(tech)
         })
         const json = await response.json();
 
@@ -22,13 +22,12 @@ export const useLogin = () => {
             setError(json.error);
         }
         if(response.ok) {
-            // save user to local storage
-            localStorage.setItem("user", JSON.stringify(json))
+            localStorage.setItem("user", JSON.stringify(json));
             // update auth context
-            dispatch({ type: "LOGIN", payload: json })
+            dispatch({ type: "FAVTECH", payload: JSON.stringify(tech) })
             setIsLoading(false)
         }
     }
     
-    return { login, isLoading, error }
+    return { favoriteTech, isLoading, error }
 }
